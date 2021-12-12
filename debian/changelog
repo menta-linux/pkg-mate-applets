@@ -1,8 +1,23 @@
-mate-applets (1.26.0-1) UNRELEASED; urgency=medium
+mate-applets (1.26.0-1) unstable; urgency=medium
 
+  [ Martin Wimpress ]
   * New upstream release.
+  * debian/control:
+    + Dependencies updated for MATE 1.26.
 
- -- Martin Wimpress <code@wimpress.io>  Sat, 21 Aug 2021 18:02:38 +0100
+  [ Mike Gabriel ]
+  * debian/control:
+    + Bump Standards-Version: to 4.6.0. No changes needed.
+  * debian/watch:
+    + Use format version 4.
+  * debian/copyright:
+    + Update copyright attributions.
+  * debian/patches:
+    + Add 1001_spelling-fixes.patch. Typo fix.
+  * debian/mate-applets-common.lintian-overrides:
+    + Override icon-size-and-directory-name-mismatch, issue filed upstream.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 12 Dec 2021 23:20:08 +0100
 
 mate-applets (1.24.1-1) unstable; urgency=medium
 
