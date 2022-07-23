@@ -1,3 +1,13 @@
+mate-applets (1.26.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - geyes: consider the offset widget <-> window. (Closes: #865593).
+    - See upstream ChangeLog for further updates/fixes.
+  * debian/control:
+    + Bump Standards-Version: to 4.6.1. No changes needed.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 23 Jul 2022 23:51:50 +0200
+
 mate-applets (1.26.0-1) unstable; urgency=medium
 
   [ Martin Wimpress ]
