@@ -3,6 +3,8 @@ mate-applets (1.26.1-1) unstable; urgency=medium
   * New upstream release.
     - geyes: consider the offset widget <-> window. (Closes: #865593).
     - See upstream ChangeLog for further updates/fixes.
+  * debian/patches:
+    + Drop 1001_spelling-fixes.patch. Applied upstream
   * debian/control:
     + Bump Standards-Version: to 4.6.1. No changes needed.
 
