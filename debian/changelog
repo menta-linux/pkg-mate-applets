@@ -1,3 +1,12 @@
+mate-applets (1.26.1-2) unstable; urgency=medium
+
+  * debian/control:
+    + Drop B-D: on deprecated policykit-1. Not required. B-D on
+      libpolkit-gobject-1-dev is sufficient. (Closes: #1025597).
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 10 Sep 2023 14:14:58 +0200
+
 mate-applets (1.26.1-1) unstable; urgency=medium
 
   * New upstream release.
