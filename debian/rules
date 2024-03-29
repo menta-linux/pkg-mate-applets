@@ -20,6 +20,7 @@ DEB_CONFIGURE_SCRIPT := ./autogen.sh
 
 DEB_CONFIGURE_EXTRA_FLAGS += \
                 --with-iwevgenie \
+                --without-nl \
                 --disable-silent-rules \
                 --libexecdir=/usr/lib/mate-applets \
                 --localstatedir=/var \
