@@ -1,3 +1,17 @@
+mate-applets (1.26.1-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload, with permission.
+  * Backport an upstream commit to fix a FTBFS with GCC 14. (Closes: #1075258)
+  * Revert the libnl -> libiwevgenie netspeed changes introduced with
+    1.26.1-3. libiw is deprecated, the build dependency is obsolete, and the
+    kernel emits warnings for the use of the deprecated API as well.
+    (Closes: #1058736)
+  * Remove org.mate.CPUFreqSelector.conf from /etc on upgrades, as this is
+    cruft left behind from when the file was moved to /usr/share back in the
+    1.24 series. (Closes: #951678)
+
+ -- Faidon Liambotis <paravoid@debian.org>  Thu, 05 Sep 2024 18:11:25 +0300
+
 mate-applets (1.26.1-3) unstable; urgency=medium
 
   * debian/rules:
