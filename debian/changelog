@@ -1,3 +1,13 @@
+mate-applets (1.26.1-4) unstable; urgency=medium
+
+  * Team upload.
+  * Redo CDBS build as DebHelper again (Closes: #1114793)
+  * Switch from debhelper-compat 10 to 13
+  * Bump Standards-Version to 4.7.2
+  * Drop ""Rules-Requires-Root: no": it is the new default
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 24 Sep 2025 13:42:56 +0200
+
 mate-applets (1.26.1-3.1) unstable; urgency=medium
 
   * Non-maintainer upload, with permission.
