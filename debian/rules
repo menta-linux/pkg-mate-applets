@@ -10,7 +10,7 @@ include /usr/share/dpkg/buildflags.mk
 override_dh_auto_configure:
 	dh_auto_configure -- \
                 --libexecdir=/usr/lib/mate-applets \
-                --disable-static
+		--$(if $(filter linux,$(DEB_HOST_ARCH_OS)),with,without)-nl
 
 execute_after_dh_auto_install:
 	# applets have been moved to <PREFIX>/lib/mate-applets/ (and renamed) since 1.24.0
