@@ -1,3 +1,11 @@
+mate-applets (1.26.1-5) unstable; urgency=medium
+
+  * Team upload
+  * Try to fix Hurd build
+  * Update Standards Version to 4.7.4
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Sun, 18 Oct 2026 13:31:35 +0200
+
 mate-applets (1.26.1-4) unstable; urgency=medium
 
   * Team upload.
