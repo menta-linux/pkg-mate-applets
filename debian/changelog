@@ -1,3 +1,15 @@
+mate-applets (1.28.1+git20261020.e4b07e6-1menta1) unstable; urgency=medium
+
+  * Menta Linux rebuild: upstream git snapshot e4b07e6 (2026-10-20,
+    v1.28.1+22; upstream has no 1.29.0 tag).
+  * debian/rules: Build with --enable-in-process (all 14 applets
+    InProcess=true); do not ship .a/.la files.
+  * debian/control: Build-Depend on libsoup-3.0-dev and libjson-glib-dev
+    (new upstream deps).
+  * debian/watch: Track GitHub releases.
+
+ -- Menta Linux <packages@menta-linux.invalid>  Sat, 14 Nov 2026 17:26:49 -0700
+
 mate-applets (1.26.1-5) unstable; urgency=medium
 
   * Team upload
