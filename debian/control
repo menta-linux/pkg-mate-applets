@@ -7,7 +7,9 @@ Uploaders: Mike Gabriel <sunweaver@debian.org>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
            Martin Wimpress <code@flexion.org>,
 Standards-Version: 4.7.4
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: autoconf,
+               automake,
+               debhelper-compat (= 13),
                dh-exec,
                dpkg-dev (>= 1.16.1.1),
                intltool,
@@ -19,12 +21,15 @@ Build-Depends: debhelper-compat (= 13),
                libgtksourceview-3.0-dev,
                libgtop2-dev,
                libgucharmap-2-90-dev,
+               libjson-glib-dev,
                libiw-dev [linux-any],
                libmate-panel-applet-dev (>= 1.26),
                libmateweather-dev (>= 1.18),
                libnl-genl-3-dev [linux-any],
                libnotify-dev,
                libpolkit-gobject-1-dev,
+               libsoup-3.0-dev,
+               libtool,
                libupower-glib-dev,
                libwnck-3-dev,
                libx11-dev,
@@ -74,6 +79,12 @@ Description: Various applets for the MATE panel
  .
  Trash: lets you drag items to the trash folder.
  .
+ Invest: tracks stock quotes (via the Yahoo Finance JSON API).
+ .
+ Stickynotes: desktop sticky notes.
+ .
+ Timer: simple countdown timer applet.
+ .
  Weather report: downloads weather information from the U.S National Weather
  Service (NWS) servers, including the Interactive Weather Information
  Network (IWIN).
@@ -111,6 +122,12 @@ Description: Various applets for the MATE panel (common files)
  System monitor: CPU, memory, network, swap file and resource.
  .
  Trash: lets you drag items to the trash folder.
+ .
+ Invest: tracks stock quotes (via the Yahoo Finance JSON API).
+ .
+ Stickynotes: desktop sticky notes.
+ .
+ Timer: simple countdown timer applet.
  .
  Weather report: downloads weather information from the U.S National Weather
  Service (NWS) servers, including the Interactive Weather Information

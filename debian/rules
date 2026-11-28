@@ -3,14 +3,21 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
-	dh $@
+	dh $@ --without autoreconf
 
 override_dh_auto_configure:
+	NOCONFIGURE=1 ./autogen.sh
 	dh_auto_configure -- \
                 --libexecdir=/usr/lib/mate-applets \
+		--enable-in-process=yes \
 		--$(if $(filter linux,$(DEB_HOST_ARCH_OS)),with,without)-nl
+	# configure silently skips invest when libsoup-3.0/json-glib are missing: make that fatal
+	grep -q '^S\["BUILD_INVEST_APPLET_TRUE"\]=""' config.status
+	grep -q '^S\["ENABLE_IN_PROCESS_TRUE"\]=""' config.status
 
 execute_after_dh_auto_install:
+	# applet modules are dlopen()ed in-process by mate-panel; no static/libtool archives
+	rm -fv debian/tmp/usr/lib/*/mate-applets/*.a debian/tmp/usr/lib/*/mate-applets/*.la
 	# applets have been moved to <PREFIX>/lib/mate-applets/ (and renamed) since 1.24.0
 	rm -fv  debian/*/usr/share/man/man1/mate-charpick-applet.1*
 	rm -fv  debian/*/usr/share/man/man1/mate-drivemount-applet.1*

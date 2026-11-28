@@ -1,3 +1,35 @@
+mate-applets (1.28.1+git20261119.57488bf-1menta1) unstable; urgency=medium
+
+  * Menta Linux build of upstream master at commit 57488bf (2026-11-19,
+    'Use edit-clear-all icon for Empty Trash'), 23 commits after 1.28.1.
+    Orig tarball is a git snapshot. Brings back the invest applet
+    (libsoup 3), in-process fixes (geyes, battstat, drivemount), gettext
+    domain for GtkBuilder.
+  * debian/control: add autoconf, automake, libtool, libsoup-3.0-dev,
+    libjson-glib-dev; invest is shipped in mate-applets.
+  * debian/rules: run autogen.sh (snapshot has no configure); keep --
+    enable-in-process=yes and fail if invest or in-process are not
+    enabled. Upstream has no Wayland switch.
+
+ -- Menta Linux <packages@menta-linux.invalid>  Sun, 22 Nov 2026 23:01:19 -0700
+
+mate-applets (1.28.1-1menta2) unstable; urgency=medium
+
+  * Pass --enable-in-process=yes explicitly.
+
+ -- Menta Linux <packages@menta-linux.invalid>  Sun, 22 Nov 2026 20:54:22 -0700
+
+mate-applets (1.28.1-1menta1) unstable; urgency=medium
+
+  * Menta Linux rebuild: new upstream release 1.28.1.
+  * debian/rules: Build with --enable-in-process (all applets
+    InProcess=true); do not ship .a/.la files.
+  * debian/patches: Drop 0001_fix_ftbfs_with_gcc14.patch (already in upstream
+    1.28.1); series left empty for Menta patches.
+  * debian/watch: Track GitHub releases.
+
+ -- Menta Linux <packages@menta-linux.invalid>  Sat, 14 Nov 2026 17:30:00 -0700
+
 mate-applets (1.26.1-5) unstable; urgency=medium
 
   * Team upload
